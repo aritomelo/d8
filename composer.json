@@ -1,0 +1,39 @@
+{
+    "name": "aritotek4u/my_paragraphs",
+    "description": "Drupal module providing a collection of Paragraph types based on ECL components.",
+    "type": "drupal-project",
+    "license": "aritotek4u",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "drupal/paragraphs": "~1.2",
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "composer/installers": "^1.2",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/config_devel": "~1.2",
+        "drupal/core": "^8.5",
+        "drupal/drupal-extension": "^4.0.0@alpha",
+        "drush/drush": "^9",
+        "ec-europa/oe-code-review": "^0.1",
+        "ec-europa/oe-task-runner": "^0.3",
+        "phpunit/phpunit": "^4.8.28"
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+    },
+    "extra": {
+        "installer-paths": {
+            "build/core": ["type:drupal-core"],
+            "build/modules/contrib/{$name}": ["type:drupal-module"],
+            "build/themes/contrib/{$name}": ["type:drupal-theme"]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ]
+}
