@@ -22,6 +22,3 @@ commands:
   drupal:site-setup:
     - { task: "run", command: "drupal:drush-setup" }
     - { task: "run", command: "drupal:settings-setup" }
-    - { task: "run", command: "setup:behat" }
-  setup:behat:
-    - { task: "process", source: "behat.yml.dist", destination: "behat.yml" }
